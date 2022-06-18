@@ -7,7 +7,7 @@ string[] array2 = new string[length];
 
 //Fill array
 Console.WriteLine("Fill the array whith values, please.");
-FillArray(array);
+FillArr(array);
 
 //Output array
 Console.WriteLine();
@@ -41,7 +41,7 @@ OutputArr(array2);
 
 
 //Filling the array
-void FillArray(string[] arr)
+void FillArr(string[] arr)
 {
     for (int i = 0; i < length; i++)
     {
