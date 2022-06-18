@@ -13,6 +13,23 @@ FillArray(array);
 Console.WriteLine();
 Console.WriteLine("Entered array:");
 OutputArr(array);
+Console.WriteLine();
+
+//Entering the maximum length of a value in a cell
+Console.WriteLine();
+int MaxValue = InputValue("Enter maximum length of the value in the cell:");
+
+int InputValue (string n)
+{
+    int value;
+        Console.Write(n);
+        while (!int.TryParse(Console.ReadLine(), out value) || value<=0)
+        {
+            Console.WriteLine("Error! Value must be tipe of the integer!");
+            Console.WriteLine(n);
+        }
+    return value;
+}  
 
 //Creating new sorted array
 SortArr(array, array2);
@@ -46,7 +63,7 @@ void SortArr(string[] arr, string[] arr2)
 {
     for (int i = 0; i < length; i++)
     {
-        if (arr[i].Length <= 3)
+        if (arr[i].Length <= MaxValue)
         {
             arr2[i] = arr[i];
         }
